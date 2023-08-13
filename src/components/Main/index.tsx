@@ -1,15 +1,27 @@
-import { MainContainer, SectionContainer, TitleContainer, ParagraphContainer, DivContainer, ButtonContainer, BgVariant } from "./index.styles";
+import { MainContainer, SectionContainer, TitleContainer, ParagraphContainer, DivContainer, ButtonContainer, variant } from "./index.styles";
 
 interface MainProps{
-    bgVariant: BgVariant;
+    variant?: variant;
 }
 
-export function Main({bgVariant}: MainProps){
+const title = {
+    index: "Boas Vindas a Lacrei Saúde",
+    user: "Pessoa Usuária",
+    professional: "Profissional"
+}
+
+const span = {
+    index: "Uma plataforma segura e acolhedora para comunidade LGBTQIAPN+",
+    user: "A Lacrei garante que pessoas LGBTQIAPN + recebam atendimento realizado por profissionais de qualidade e que atendam às suas necessidades de forma segura e acolhedora.",
+    professional: "A Lacrei garante que pessoas LGBTQIAPN + recebam atendimento realizado por profissionais de qualidade e que atendam às suas necessidades de forma segura e acolhedora."
+}
+
+export function Main({variant = "index"}: MainProps){
     return (
-        <MainContainer bgVariant={bgVariant}>
+        <MainContainer variant={variant}>
             <SectionContainer>
-                <TitleContainer>Boas Vindas a Lacrei Saúde</TitleContainer>
-                <ParagraphContainer>Uma plataforma segura e acolhedora para comunidade LGBTQIAPN+</ParagraphContainer>
+                <TitleContainer>{title[variant]}</TitleContainer>
+                <ParagraphContainer variant={variant}>{span[variant]}</ParagraphContainer>
                 <DivContainer>
                     <ButtonContainer>Pessoa Usuária</ButtonContainer>
                     <ButtonContainer>Profissional</ButtonContainer>

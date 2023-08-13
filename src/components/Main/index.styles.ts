@@ -1,15 +1,27 @@
 import styled from "styled-components";
 
-export type BgVariant = "index" | "user" | "professional";
+export type variant = "index" | "user" | "professional";
 
 interface MainContainerProps{
-    bgVariant: BgVariant;
+    variant: variant;
 }
 
 const background = {
     index: "background-index.png",
     user: "background-user.png",
     professional: "background-professional.png"
+}
+
+const border = {
+    index: "none",
+    user: "0.313rem solid #018762",
+    professional: "0.313rem solid #018762"
+}
+
+const padding = {
+    index: "0",
+    user: "1.5rem",
+    professional: "1.5rem"
 }
 
 export const MainContainer = styled.main<MainContainerProps>`
@@ -22,7 +34,7 @@ export const MainContainer = styled.main<MainContainerProps>`
     //background-image: url(${background});
     ${ props => {
         return `
-        background-image: url(${background[props.bgVariant]})
+        background-image: url(${background[props.variant]})
     `
     }}
 `
@@ -37,11 +49,17 @@ export const TitleContainer = styled.h1`
     font-weight: 700;
 `
 
-export const ParagraphContainer = styled.p`
+export const ParagraphContainer = styled.p<MainContainerProps>`
     color: #515151;
     font-size: 1.5rem;
     font-weight: 400;
     margin-top: 2rem;
+    ${props => {
+        return `
+        border-left: ${border[props.variant]};
+        padding-left: ${padding[props.variant]};
+        `
+    }}
 `
 
 export const DivContainer = styled.div`

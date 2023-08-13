@@ -1,7 +1,5 @@
+import { Main } from "../components/Main";
+
 export function Professional(){
-    return (
-        <div>
-            <h1>Professional</h1>
-        </div>
-    )
+    return <Main variant="professional"/>
 }
