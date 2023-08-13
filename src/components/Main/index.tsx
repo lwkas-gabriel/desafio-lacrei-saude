@@ -23,8 +23,8 @@ export function Main({variant = "index"}: MainProps){
                 <TitleContainer>{title[variant]}</TitleContainer>
                 <ParagraphContainer variant={variant}>{span[variant]}</ParagraphContainer>
                 <DivContainer>
-                    <ButtonContainer>Pessoa Usuária</ButtonContainer>
-                    <ButtonContainer>Profissional</ButtonContainer>
+                    <ButtonContainer href="/user">Pessoa Usuária</ButtonContainer>
+                    <ButtonContainer href="/professional">Profissional</ButtonContainer>
                 </DivContainer>
             </SectionContainer>
         </MainContainer>

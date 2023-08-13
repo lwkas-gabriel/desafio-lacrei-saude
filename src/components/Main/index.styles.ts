@@ -31,10 +31,9 @@ export const MainContainer = styled.main<MainContainerProps>`
     justify-content: start;
     margin-left: 4rem;
     align-items: center;
-    //padding: 4rem 0 0 4rem;
     background-position: right;
     background-repeat: no-repeat;
-    @media (max-width: 950px){
+    @media (max-width: 940px){
         background-image: none;
     }
     @media (max-width: 557px){
@@ -52,8 +51,8 @@ export const MainContainer = styled.main<MainContainerProps>`
 
 export const SectionContainer = styled.section`
     max-width: 29rem;
-    @media (max-width: 460px){
-        max-width: 85%;
+    @media (max-width: 940px){
+        max-width: 90%;
     }
 `
 
@@ -82,14 +81,17 @@ export const DivContainer = styled.div`
     margin-top: 3rem;
 `
 
-export const ButtonContainer = styled.button`
+export const ButtonContainer = styled.a`
     width: 12rem;
     height: 3rem;
+    padding: .55rem;
+    text-decoration: none;
     text-align: center;
     font-size: 1.125rem;
     font-weight: 700;
     color: #018762;
     background-color: #fff;
+    border: 2px solid #018762;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
     &:hover{

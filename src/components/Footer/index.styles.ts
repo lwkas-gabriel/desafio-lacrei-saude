@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FooterContainer = styled.footer`
     margin-top: 9.125rem;
     padding-left: 4rem;
-    @media (max-width: 557px){
+    @media (max-width: 590px){
         padding-left: 0;
     }
 `
@@ -36,6 +36,9 @@ export const DivContainer = styled.div`
     display: flex;
     gap: 2rem;
     margin-bottom: 1.5rem;
+    @media (max-width: 590px){
+        justify-content: center;
+    }
 `
 
 export const ParagraphContainer = styled.p`
