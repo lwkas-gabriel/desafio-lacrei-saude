@@ -27,20 +27,34 @@ const padding = {
 export const MainContainer = styled.main<MainContainerProps>`
     height: 35rem;
     display: flex;
-    flex-direction: column;
-    padding: 4rem 0 0 4rem;
+    flex-direction: row;
+    justify-content: start;
+    margin-left: 4rem;
+    align-items: center;
+    //padding: 4rem 0 0 4rem;
     background-position: right;
     background-repeat: no-repeat;
-    //background-image: url(${background});
+    @media (max-width: 950px){
+        background-image: none;
+    }
+    @media (max-width: 557px){
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
     ${ props => {
         return `
         background-image: url(${background[props.variant]})
     `
-    }}
+    }} 
+
 `
 
 export const SectionContainer = styled.section`
     max-width: 29rem;
+    @media (max-width: 460px){
+        max-width: 85%;
+    }
 `
 
 export const TitleContainer = styled.h1`
@@ -64,7 +78,7 @@ export const ParagraphContainer = styled.p<MainContainerProps>`
 
 export const DivContainer = styled.div`
     display: flex;
-    gap: 69px;
+    gap: 4.313rem;
     margin-top: 3rem;
 `
 

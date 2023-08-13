@@ -3,12 +3,19 @@ import styled from "styled-components";
 export const FooterContainer = styled.footer`
     margin-top: 9.125rem;
     padding-left: 4rem;
+    @media (max-width: 557px){
+        padding-left: 0;
+    }
 `
 
 export const ListContainer = styled.ul`
     display: flex;
     gap: 2.5rem;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+    @media (max-width: 590px){
+        display: flex;
+        justify-content: center;
+    }
 `
 
 export const ListItemContainer = styled.li`
@@ -28,11 +35,11 @@ export const LinkContainer = styled.a`
 export const DivContainer = styled.div`
     display: flex;
     gap: 2rem;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
 `
 
 export const ParagraphContainer = styled.p`
     color: #515151;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 400;
 `
