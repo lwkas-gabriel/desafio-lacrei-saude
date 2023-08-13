@@ -1,8 +1,12 @@
-import { MainContainer, SectionContainer, TitleContainer, ParagraphContainer, DivContainer, ButtonContainer } from "./index.styles";
+import { MainContainer, SectionContainer, TitleContainer, ParagraphContainer, DivContainer, ButtonContainer, BgVariant } from "./index.styles";
 
-export function Main(){
+interface MainProps{
+    bgVariant: BgVariant;
+}
+
+export function Main({bgVariant}: MainProps){
     return (
-        <MainContainer>
+        <MainContainer bgVariant={bgVariant}>
             <SectionContainer>
                 <TitleContainer>Boas Vindas a Lacrei Saúde</TitleContainer>
                 <ParagraphContainer>Uma plataforma segura e acolhedora para comunidade LGBTQIAPN+</ParagraphContainer>

@@ -1,13 +1,30 @@
 import styled from "styled-components";
 
-export const MainContainer = styled.main`
+export type BgVariant = "index" | "user" | "professional";
+
+interface MainContainerProps{
+    bgVariant: BgVariant;
+}
+
+const background = {
+    index: "background-index.png",
+    user: "background-user.png",
+    professional: "background-professional.png"
+}
+
+export const MainContainer = styled.main<MainContainerProps>`
     height: 35rem;
     display: flex;
     flex-direction: column;
     padding: 4rem 0 0 4rem;
-    background-image: url("background-one.png");
     background-position: right;
     background-repeat: no-repeat;
+    //background-image: url(${background});
+    ${ props => {
+        return `
+        background-image: url(${background[props.bgVariant]})
+    `
+    }}
 `
 
 export const SectionContainer = styled.section`

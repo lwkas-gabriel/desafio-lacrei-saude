@@ -1,13 +1,16 @@
 import { Header } from "./components/Header"
 import { Main } from "./components/Main"
 import { Footer } from "./components/Footer"
+import { GlobalStyle } from "./styles/global"
 
 function App() {
   return (
-    <div className="app">
+    <div>
       <Header/>
-      <Main/>
+      <Main bgVariant="index"/>
       <Footer/>
+
+      <GlobalStyle />
     </div>
   )
 }
