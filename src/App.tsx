@@ -1,16 +1,20 @@
-import { Header } from "./components/Header"
-import { Main } from "./components/Main"
-import { Footer } from "./components/Footer"
+// import { Header } from "./components/Header"
+// import { Main } from "./components/Main"
+// import { Footer } from "./components/Footer"
+import { Router } from "./Router"
+import {BrowserRouter} from "react-router-dom"
 import { GlobalStyle } from "./styles/global"
 
 function App() {
   return (
     <div>
-      <Header/>
+      {/* <Header/>
       <Main bgVariant="index"/>
-      <Footer/>
-
-      <GlobalStyle />
+      <Footer/> */}
+      <BrowserRouter>
+        <Router />
+        <GlobalStyle />
+      </BrowserRouter>
     </div>
   )
 }
